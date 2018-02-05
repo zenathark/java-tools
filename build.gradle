@@ -48,6 +48,12 @@ sourceSets {
     }
 }
 
+//TODO: make a jump to test plugin for gradle
+
+task 'test-src' {
+    println sourceSets.test.groovy.srcDirs
+}
+
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     // api 'org.apache.commons:commons-math3:3.6.1'
