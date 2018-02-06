@@ -7,3 +7,6 @@ gradlew.bat
 
 # Emacs
 .meghanada
+
+# jmh
+*.log

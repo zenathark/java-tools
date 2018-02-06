@@ -1,3 +1,5 @@
+package io.zenathark.tools;
+
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -5,18 +7,22 @@ import java.math.*;
 import java.util.regex.*;
 import java.util.function.*;
 
-public class FastBST {
-  public FastBST right;
-  public FastBST left;
-  public FastBST parent;
+public class FastBSTp {
+  public FastBSTp right;
+  public FastBSTp left;
+  public FastBSTp parent;
   public int label;
   // Payload
 
-  public FastBST(int label) {
+  public static FastBSTp createRoot(int label) {
+    return new FastBSTp(label);
+  }
+
+  private FastBSTp(int label) {
     this(label, null, null, null);
   }
 
-  public FastBST(int label, FastBST left, FastBST right, FastBST parent) {
+  private FastBSTp(int label, FastBSTp left, FastBSTp right, FastBSTp parent) {
     this.label = label;
     this.left = left;
     this.right = right;
@@ -35,14 +41,18 @@ public class FastBST {
     return String.format("{%d, L: %s, R: %s, P: %s}", label, l, r, p);
   }
 
+  public static FastBSTp insert(FastBSTp root, int label) {
+    return insert(root, new FastBSTp(label));
+  }
   /**
    * Inserts a new leaf into the tree.
    *
    * @param root Root of the BST tree.
    * @param newNode Node to be inserted as a leaf.
    */
-  public static FastBST insert(FastBST root, FastBST newNode) {
-    FastBST cNode = root;
+  public static FastBSTp insert(FastBSTp root, FastBSTp newNode) {
+    if (root == null) return newNode;
+    FastBSTp cNode = root;
     while (true) {
       if (newNode.getLabel() < cNode.getLabel()) {
         if (cNode.left != null) cNode = cNode.left;
@@ -63,8 +73,8 @@ public class FastBST {
     return root;
   }
 
-  public static FastBST search(FastBST root, int label) {
-    FastBST ans = root;
+  public static FastBSTp search(FastBSTp root, int label) {
+    FastBSTp ans = root;
     while (ans != null) {
       if (ans.label == label) break;
       else if (ans.label < label) {
@@ -84,8 +94,8 @@ public class FastBST {
    * @param root BST's root
    * @param label Node's label to be removed
    */
-  public static FastBST remove(FastBST root, int label) {
-    FastBST d = search(root, label);
+  public static FastBSTp remove(FastBSTp root, int label) {
+    FastBSTp d = search(root, label);
     if (d.left == null && d.right == null) {
       if (d.parent.left.label == d.label) d.parent.left = null;
       else d.parent.right = null;
@@ -99,7 +109,7 @@ public class FastBST {
       else d.parent.right = d.left;
 
     } else {
-      FastBST rep = d.left;
+      FastBSTp rep = d.left;
       while (rep.right != null) rep = rep.right;
       if (d.parent.left.label == d.label) d.parent.left = rep;
       else d.parent.right = rep;
@@ -107,25 +117,30 @@ public class FastBST {
     return root;
   }
 
-  public static FastBST rotateLeft(FastBST root, FastBST pivot) {
-    FastBST parent = pivot.parent;
+  public static FastBSTp rotateLeft(FastBSTp root, FastBSTp pivot) {
+    FastBSTp parent = pivot.parent;
     parent.right = pivot.left;
     pivot.left = parent;
     return root;
   }
 
-  public static FastBST rotateRight(FastBST root, FastBST pivot) {
-    FastBST parent = pivot.parent;
+  public static FastBSTp rotateRight(FastBSTp root, FastBSTp pivot) {
+    FastBSTp parent = pivot.parent;
     parent.left = pivot.right;
     pivot.right = parent;
     return root;
   }
 
-  public class PreOrder implements Iterator<FastBST> {}
-
-  public class InOrder implements Iterator<FastBST> {}
-
-  public class PostOrder implements Iterator<FastBST> {}
-
-  public class LevelOrder implements Iterator<FastBST> {}
+  public static void preOrder(FastBSTp root) {
+    ArrayDeque<FastBSTp> queue = new ArrayDeque<>();
+    queue.addLast(root);
+    while (!queue.isEmpty()) {
+      FastBSTp ans = queue.removeFirst();
+      // Test function
+      int t = ans.label + 5;
+      // End Test Function
+      if (ans.left != null) queue.addFirst(ans.left);
+      if (ans.right != null) queue.addFirst(ans.right);
+    }
+  }
 }
