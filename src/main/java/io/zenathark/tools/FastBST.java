@@ -139,9 +139,15 @@ public class FastBST {
     };
   }
 
-  // Static pre order traversal, only for hard code editing
-  // This is not faster than the iterator, see benchmark
-  public static void preOrder(FastBSTp root) {
+  public static void preOrder(FastBST root) {
+    for (FastBST e : root.preorderIterator()) {
+      // Test function
+      int t = e.label + 5;
+      // End Test Function
+    }
+  }
+
+  public static void preOrder2(FastBSTp root) {
     ArrayDeque<FastBSTp> queue = new ArrayDeque<>();
     queue.addLast(root);
     while (!queue.isEmpty()) {
