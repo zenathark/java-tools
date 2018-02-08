@@ -14,8 +14,12 @@ import io.zenathark.tools.*
 public class ParameterBSTBenchmark {
     class IntWrapper implements Comparable<IntWrapper> {
 	int label;
+
+	IntWrapper(int label) {
+	    this.label = label
+	}
 	@Override
-	def compareTo(o) = label - o
+	public int compareTo(IntWrapper o) { label - o }
     }
 
   static final int SIZE = 100000
@@ -27,22 +31,27 @@ public class ParameterBSTBenchmark {
     void initTrees() {
 	numbers = new int[SIZE]
 	bst = FastBST.createRoot(0)
-	bstp = ParameterBST.createRoot<IntWrapper>(new IntWrapper(0))
+	bstp = ParameterBST.createRoot(new IntWrapper(0))
 
 	for (int i = 1; i < SIZE; i++) {
 	    numbers[i] = i
 	    FastBST.insert(bst, i)
-	    ParameterBST.insert<IntWrapper>(bstp, new IntWrapper(0))
+	    ParameterBST.insert(bstp, new IntWrapper(0))
 	}
     }
 
   @Benchmark
-  def withParameter(Blackhole blackhole) {
-    ParameterBST.preOrder(bstp)
+    def baseline(Blackhole blackhole) {
+	for (e in bst.preorderIterator()) {
+	    blackhole.consume(e.label + 5)
+	}
   }
 
   @Benchmark
-  def baseline(Blackhole blackhole) {
-    FastBST.preOrder(bst)
+  def withParameter(Blackhole blackhole) {
+	for (e in bstp.preorderIterator()) {
+	    blackhose.consume(e.payload.label + 5)
+	}
   }
+
 }
