@@ -5,8 +5,16 @@ gradle/*
 gradlew
 gradlew.bat
 
+
 # Emacs
 .meghanada
 
 # jmh
 *.log
+
+*.class
+target/*
+project/*
+
+!/project/plugins.sbt
+!/project/build.properties
