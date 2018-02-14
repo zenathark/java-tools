@@ -11,3 +11,5 @@ lazy val root =
     )
 
 javaSource in Compile := baseDirectory.value / "src/main/java"
+
+libraryDependencies += "org.scalatest" % "scalatest_2.12" % "3.0.4" % "test"
