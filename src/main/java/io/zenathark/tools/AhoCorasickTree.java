@@ -18,7 +18,6 @@ class AhoCorasickTree {
     Optional<AhoCorasickTree> parent;  // Double link for easy navigation
     //--AhoCorasick extra links
     Optional<AhoCorasickTree> fall;    // AC connection
-
     boolean isCompiled;
 
     public AhoCorasickTree() {
