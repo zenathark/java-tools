@@ -1,0 +1,44 @@
+exit
+quit
+exit
+jmh:run
+sbt clean
+clean
+jmh:run
+clean
+jmh:run
+clean
+jmh:run
+clean
+jmh:run
+clean
+jmh:run
+clean
+jmh:run
+clean
+jmh:run
+clean
+jmh:run
+clean
+jmh:run
+clean
+jmh:run
+clean
+jmh:run
+clean
+jmh:run
+clean 
+jmh:run .*ParameterBSTBenchmark.*
+jmh:run -i 100 -wi 100 -f1 -t1 .*ParameterBSTBenchmark.*
+clean
+jmh:run -i 100 -wi 100 -f1 -t1 .*ParameterBSTBenchmark.*
+quit
+exit
+sbt test
+sbt:test
+sbt:tasks
+sbt task
+help
+test
+ls
+exit

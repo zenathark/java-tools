@@ -1,0 +1,27 @@
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/zenathark/projects/java/src/github.com/zenathark/java-tools/src/test/scala/io/zenathark/tools/IntArrayTest.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(io.zenathark.tools.IntArrayTest)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll sources are invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all 1 sources: invalidated sources (1) exceeded 50.0% of all sources[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to /home/zenathark/projects/java/src/github.com/zenathark/java-tools/target/scala-2.12/test-classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.0.1:compile for Scala 2.12.3[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.0.1:compile for Scala 2.12.3[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 2ae41095 for Scala compiler version 2.12.3[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/usr/lib/jvm/java-8-openjdk/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk/jre/classes:/home/zenathark/.sbt/boot/scala-2.12.3/lib/scala-library.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/home/zenathark/projects/java/src/github.com/zenathark/java-tools/target/scala-2.12/test-classes:/home/zenathark/projects/java/src/github.com/zenathark/java-tools/target/scala-2.12/classes:/home/zenathark/.ivy2/cache/pl.project13.scala/sbt-jmh-extras/jars/sbt-jmh-extras-0.3.3.jar:/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-core/jars/jmh-core-1.20.jar:/home/zenathark/.ivy2/cache/net.sf.jopt-simple/jopt-simple/jars/jopt-simple-4.6.jar:/home/zenathark/.ivy2/cache/org.apache.commons/commons-math3/jars/commons-math3-3.2.jar:/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-generator-bytecode/jars/jmh-generator-bytecode-1.20.jar:/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-generator-reflection/jars/jmh-generator-reflection-1.20.jar:/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-generator-asm/jars/jmh-generator-asm-1.20.jar:/home/zenathark/.ivy2/cache/org.ow2.asm/asm/jars/asm-5.0.3.jar:/home/zenathark/.ivy2/cache/org.scalatest/scalatest_2.12/bundles/scalatest_2.12-3.0.4.jar:/home/zenathark/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.4.jar:/home/zenathark/.sbt/boot/scala-2.12.3/lib/scala-reflect.jar:/home/zenathark/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.5.jar:/home/zenathark/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/bundles/scala-parser-combinators_2.12-1.0.4.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.488282149 s[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m

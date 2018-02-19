@@ -1,0 +1,11 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mIntArrayTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAn Int Array[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should start as an empty int[][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAn Int Array[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should add an element[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mthe seq method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return an array from variadic elements[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mseq method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should recibe an array as new data[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mthe add method[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should increment size in size * 3 / 2 + 1[0m[0m

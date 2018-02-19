@@ -1,0 +1,2 @@
+[0m[[0m[31merror[0m] [0m[0m/home/zenathark/projects/java/src/github.com/zenathark/java-tools/src/main/java/io/zenathark/tools/IntArray.java:33:1: ';' expected[0m
+[0m[[0m[31merror[0m] [0m[0m    arr.size = data.length[0m
