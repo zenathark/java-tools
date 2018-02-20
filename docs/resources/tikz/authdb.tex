@@ -1,0 +1,47 @@
+%% \usetikzlibrary{shapes, arrows, chains}
+%% \pgfdeclarelayer{background}
+%% \pgfdeclarelayer{foreground}
+%% \pgfsetlayers{foreground}
+%% \providecommand{\cmark}[2][]{\relax}
+\setmainfont{Hack}
+\tikzumlset{fill class=gray!20}
+\begin{tikzpicture}
+  %% [
+    %% >=triangle 60,
+    %% start chain=going below,
+    %% node distance=6mm and 50mm,
+    %% every join/.append style{norm},%
+  %% ]
+  \umlclass[type=object table]{Group}{
+    <<pkey>> id : uint \\
+    groupName   : nvarchar \\
+  }{}
+  \umlclass[type=object table, y=3, x=6]{ExtraGroup}{
+    <<pkey>> id : uint \\
+  }{}
+  \umlclass[type=object table, y=6]{User}{
+    <<pkey>> id : uint \\
+    username    : nvarchar \\
+    passwd      : char(512)
+  }{}
+  \umlclass[type=object table, x=-8]{Permission}{
+    <<pkey>> id: uint\\
+    name       : char(128) \\
+  }{}
+
+  \umluniassoc[stereo=groupId, arg1=belongs to, pos1=0.1]{User}{Group}
+  \umluniassoc[geometry=|-, stereo=groupId, arg1=also belongs to, pos stereo=0.8]{ExtraGroup}{Group}
+  \umluniassoc[geometry=|-, stereo=userId, arg1=user, pos1=0.1, pos stereo=0.8]{ExtraGroup}{User}
+  \umluniassoc[stereo=groupId, arg1=is enabled for, pos stereo=0.7]{Permission}{Group}
+  %% \umlassoc[mult1=1..*, mult2=1..*, name=UserGroup]{Group}{User}
+  %% \umlunicompo[geometry=-|, arg=titi, mult=*, pos=1.7, stereo=vector]{D}{C}
+  %% \umlimport[geometry=|-, anchors=90 and 50, name=import]{sp2}{sp1}
+  %% \umlaggreg[arg=tutu, mult=1, pos=0.8, angle1=30, angle2=60, loopsize=2cm]{D}{D}
+  %% \umlinherit[geometry=-|]{D}{B}
+  %% \umlnote[x=2.5,y=-6, width=3cm]{B}{Je suis une note qui concerne la classe B}
+  %% \umlnote[x=7.5,y=-2]{import-2}{Je suis une note qui concerne la relation d'import}
+  %% \begin{pgfonlayer}{background}
+  %%   \path[fill=gray] (current bounding box.south west) rectangle
+  %%   (current bounding box.north east);
+  %% \end{pgfonlayer}
+\end{tikzpicture}

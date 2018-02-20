@@ -1,0 +1,18 @@
+#+latex_class: design-docs
+
+
+#+title: 00. Database Authentication Scheme
+* Introduction
+* Scheme
+#+header: :var path=(expand-file-name "../resources/tikz/authdb.tex")
+#+header: :export result :results value raw
+#+begin_src latex :file ../resources/img/authdb.png
+  \input{path}
+#+end_src
+
+
+#+RESULTS:
+[[file:../resources/img/authdb.png]]
+#+name: fig:authdb
+#+att_latex :witdth 0.9\textwidth
+#+caption Database diagram of the authentication scheme
