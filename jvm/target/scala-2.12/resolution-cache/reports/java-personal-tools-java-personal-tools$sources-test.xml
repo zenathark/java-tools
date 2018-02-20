@@ -7,7 +7,7 @@
 		revision="0.1.0-SNAPSHOT"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, jmh, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180216003133"/>
+		date="20180219235351"/>
 	<dependencies>
 		<module organisation="org.scalatest" name="scalatest_2.12">
 			<revision name="3.0.4" status="release" pubdate="20170817103359" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="10">
@@ -75,7 +75,7 @@
 				<metadata-artifact status="no" details="" size="3525" time="0" location="/home/zenathark/.ivy2/cache/pl.project13.scala/sbt-jmh-extras/ivy-0.3.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/pl/project13/scala/sbt-jmh-extras/0.3.3/sbt-jmh-extras-0.3.3.pom"/>
 				<caller organisation="java-personal-tools" name="java-personal-tools$sources" conf="test, compile, runtime" rev="0.3.3" rev-constraint-default="0.3.3" rev-constraint-dynamic="0.3.3" callerrev="0.1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="sbt-jmh-extras" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="10841" time="2388" location="/home/zenathark/.ivy2/cache/pl.project13.scala/sbt-jmh-extras/srcs/sbt-jmh-extras-0.3.3-sources.jar">
+					<artifact name="sbt-jmh-extras" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="10841" time="0" location="/home/zenathark/.ivy2/cache/pl.project13.scala/sbt-jmh-extras/srcs/sbt-jmh-extras-0.3.3-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/pl/project13/scala/sbt-jmh-extras/0.3.3/sbt-jmh-extras-0.3.3-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -87,7 +87,7 @@
 				<metadata-artifact status="no" details="" size="4423" time="0" location="/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-generator-bytecode/ivy-1.20.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-bytecode/1.20/jmh-generator-bytecode-1.20.pom"/>
 				<caller organisation="java-personal-tools" name="java-personal-tools$sources" conf="test, compile, runtime" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="0.1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="jmh-generator-bytecode" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="17994" time="616" location="/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-generator-bytecode/srcs/jmh-generator-bytecode-1.20-sources.jar">
+					<artifact name="jmh-generator-bytecode" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="17994" time="0" location="/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-generator-bytecode/srcs/jmh-generator-bytecode-1.20-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-bytecode/1.20/jmh-generator-bytecode-1.20-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -111,7 +111,7 @@
 				<metadata-artifact status="no" details="" size="4351" time="0" location="/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-generator-asm/ivy-1.20.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-asm/1.20/jmh-generator-asm-1.20.pom"/>
 				<caller organisation="java-personal-tools" name="java-personal-tools$sources" conf="test, compile, runtime" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="0.1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="jmh-generator-asm" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="28250" time="816" location="/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-generator-asm/srcs/jmh-generator-asm-1.20-sources.jar">
+					<artifact name="jmh-generator-asm" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="28250" time="0" location="/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-generator-asm/srcs/jmh-generator-asm-1.20-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-asm/1.20/jmh-generator-asm-1.20-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -123,7 +123,7 @@
 				<metadata-artifact status="no" details="" size="3953" time="0" location="/home/zenathark/.ivy2/cache/org.ow2.asm/asm/ivy-5.0.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/ow2/asm/asm/5.0.3/asm-5.0.3.pom"/>
 				<caller organisation="java-personal-tools" name="java-personal-tools$sources" conf="test, compile, runtime" rev="5.0.3" rev-constraint-default="5.0.3" rev-constraint-dynamic="5.0.3" callerrev="0.1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="asm" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="1038486" time="3690" location="/home/zenathark/.ivy2/cache/org.ow2.asm/asm/srcs/asm-5.0.3-sources.jar">
+					<artifact name="asm" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1038486" time="0" location="/home/zenathark/.ivy2/cache/org.ow2.asm/asm/srcs/asm-5.0.3-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/ow2/asm/asm/5.0.3/asm-5.0.3-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -135,7 +135,7 @@
 				<metadata-artifact status="no" details="" size="4060" time="0" location="/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-generator-reflection/ivy-1.20.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-reflection/1.20/jmh-generator-reflection-1.20.pom"/>
 				<caller organisation="java-personal-tools" name="java-personal-tools$sources" conf="test, compile, runtime" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="0.1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="jmh-generator-reflection" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="24069" time="2579" location="/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-generator-reflection/srcs/jmh-generator-reflection-1.20-sources.jar">
+					<artifact name="jmh-generator-reflection" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="24069" time="0" location="/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-generator-reflection/srcs/jmh-generator-reflection-1.20-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-reflection/1.20/jmh-generator-reflection-1.20-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -147,7 +147,7 @@
 				<metadata-artifact status="no" details="" size="4632" time="0" location="/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-core/ivy-1.20.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-core/1.20/jmh-core-1.20.pom"/>
 				<caller organisation="java-personal-tools" name="java-personal-tools$sources" conf="test, compile, runtime" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="0.1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="jmh-core" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="395182" time="3013" location="/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-core/srcs/jmh-core-1.20-sources.jar">
+					<artifact name="jmh-core" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="395182" time="0" location="/home/zenathark/.ivy2/cache/org.openjdk.jmh/jmh-core/srcs/jmh-core-1.20-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-core/1.20/jmh-core-1.20-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -159,7 +159,7 @@
 				<metadata-artifact status="no" details="" size="9676" time="0" location="/home/zenathark/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.2/commons-math3-3.2.pom"/>
 				<caller organisation="java-personal-tools" name="java-personal-tools$sources" conf="test, compile, runtime" rev="3.2" rev-constraint-default="3.2" rev-constraint-dynamic="3.2" callerrev="0.1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="commons-math3" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="2005074" time="2513" location="/home/zenathark/.ivy2/cache/org.apache.commons/commons-math3/srcs/commons-math3-3.2-sources.jar">
+					<artifact name="commons-math3" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="2005074" time="0" location="/home/zenathark/.ivy2/cache/org.apache.commons/commons-math3/srcs/commons-math3-3.2-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.2/commons-math3-3.2-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -171,7 +171,7 @@
 				<metadata-artifact status="no" details="" size="3963" time="0" location="/home/zenathark/.ivy2/cache/net.sf.jopt-simple/jopt-simple/ivy-4.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.pom"/>
 				<caller organisation="java-personal-tools" name="java-personal-tools$sources" conf="test, compile, runtime" rev="4.6" rev-constraint-default="4.6" rev-constraint-dynamic="4.6" callerrev="0.1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="jopt-simple" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="74419" time="2578" location="/home/zenathark/.ivy2/cache/net.sf.jopt-simple/jopt-simple/srcs/jopt-simple-4.6-sources.jar">
+					<artifact name="jopt-simple" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="74419" time="0" location="/home/zenathark/.ivy2/cache/net.sf.jopt-simple/jopt-simple/srcs/jopt-simple-4.6-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6-sources.jar"/>
 					</artifact>
 				</artifacts>

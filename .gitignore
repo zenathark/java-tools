@@ -14,8 +14,8 @@ gradlew.bat
 *.log
 
 *.class
-target/*
-project/*
+jvm/target/*
+jvm/project/*
 
 !/project/plugins.sbt
 !/project/build.properties

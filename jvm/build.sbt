@@ -7,7 +7,8 @@ lazy val root =
     .settings(
       name := "Java Personal Tools",
       version := "0.1.0-SNAPSHOT",
-      scalaVersion := "2.12.3"
+      scalaVersion := "2.12.3",
+      javaOptions ++= Seq("-XX:PrintCompilation -XX:+UnlockDiagnosticVMOptions -XX:+PrintInlining")
     )
 
 javaSource in Compile := baseDirectory.value / "src/main/java"

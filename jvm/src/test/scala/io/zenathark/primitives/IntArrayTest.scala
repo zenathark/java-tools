@@ -1,7 +1,6 @@
-package io.zenathark.tools
+package io.zenathark.primitives;
 
 import org.scalatest.FlatSpec
-import io.zenathark.tools._
 
 
 class IntArrayTest extends FlatSpec  {
@@ -28,7 +27,7 @@ class IntArrayTest extends FlatSpec  {
     assert(arr.data(2) == 3)
   }
 
-  "seq method" should "recibe an array as new data" in {
+  "seq method" should "recibe an array as new array" in {
     val t = Array[Int](1,2,3)
     val arr = IntArray.seq(t: _*)
     val sz = arr.data.length
