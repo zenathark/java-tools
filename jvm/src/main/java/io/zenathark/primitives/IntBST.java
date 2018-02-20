@@ -23,6 +23,7 @@
 
 package io.zenathark.primitives;
 import static io.zenathark.tools.Misc.*;
+import java.util.Iterator;
 
 /**
  * This class is an implementation of a Binary Search Tree (BST) using
@@ -46,18 +47,28 @@ import static io.zenathark.tools.Misc.*;
 
 public class IntBST {
   // Private
-  private static final int ROOT = 0;
+  final static private int ROOT = 0;
 
   /** Array holding the stored values */
-  final private IntArray data = new IntArray();
+  final public IntArray data;
   /**
    * A hash table referencing the data. Each data is a triad:
    * <tt>table[i]</tt> The index of the data
-   * <tt>table[i+1]</tt> Left node
-   * <tt>table[i+2]</tt> Right node
+   * <tt>table[i+1]</tt> Parent node
+   * <tt>table[i+2]</tt> Left node
+   * <tt>table[i+3]</tt> Right node
    *
    */
-  final private IntArray table = new IntArray();
+  final public IntArray table;
+
+  public IntBST() {
+    this(0);
+  }
+
+  public IntBST(int initialCapacity) {
+    this.data = new IntArray(initialCapacity);
+    this.table = new IntArray(initialCapacity * 4);
+  }
 
   final public IntBST push(int val) {
     final int idx = data.add(val);
@@ -106,23 +117,24 @@ public class IntBST {
    * @param val the value to be removed
    */
   final public IntBST remove(int val) {
-    int d = search(val);
-    if (d < 0) return this;
-    if (!hasLeftNode(d) && !hasRightNode(d)) {
-      if (leftNode(parent(d)) == val) setLeftNode(d, -1);
-      else setRightNode(d, -1);
-    } else if (!hasLeftNode(d) && hasRightNode(d)) {
-      if (leftNode(parent(d)) == val) setLeftNode(parent(d), rightNode(d));
-      else setRightNode(parent(d), rightNode(d));
-    } else if (hasLeftNode(d) && !hasRightNode(d)) {
-      if (leftNode(parent(d)) == val) setLeftNode(parent(d), leftNode(d));
-      else setRightNode(parent(d), leftNode(d));
-    } else {
-      int rep = leftNode(d);
-      while (rightNode(rep) >= 0) rep = rightNode(rep);
-      if (leftNode(parent(d)) == val) setLeftNode(parent(d), rep);
-      else setRightNode(parent(d), rep);
-    }
+      int d = search(val);
+      if (d < 0) return this;
+      if (!hasLeftNode(d) && !hasRightNode(d)) // Is leaf
+        if (leftNode(parent(d)) == val) setLeftNode(d, -1);
+        else setRightNode(d, -1);
+      else if (!hasLeftNode(d) && hasRightNode(d)) // Has left node
+        if (leftNode(parent(d)) == val) setLeftNode(parent(d), rightNode(d));
+        else setRightNode(parent(d), rightNode(d));
+      else if (hasLeftNode(d) && !hasRightNode(d)) // Has right node
+        if (leftNode(parent(d)) == val) setLeftNode(parent(d), leftNode(d));
+        else setRightNode(parent(d), leftNode(d));
+      else { // Has both nodes
+        int rep = leftNode(d);
+        while (rightNode(rep) >= 0) rep = rightNode(rep);
+        if (leftNode(parent(d)) == val) setLeftNode(parent(d), rep);
+        else setRightNode(parent(d), rep);
+      }
+
     return this;
   }
 
@@ -140,47 +152,64 @@ public class IntBST {
     return this;
   }
 
-  private void setParent(int i, int v) {
-    table.data[i*3 + 1] = v;
+  private void setParent(int i, int v) { table.data[i*3 + 1] = v; }
+
+  private void setLeftNode(int i, int v) { table.data[i*3 + 2] = v; }
+
+  private void setRightNode(int i, int v) { table.data[i*3 + 3] = v; }
+
+  private int parent(int i) { return table.data[i*3+1]; }
+
+  private int leftNode(int i) { return table.data[i*3+2]; }
+
+  private int rightNode(int i) { return table.data[i*3+3]; }
+
+  private boolean hasParent(int i) { return table.data[i*3+1] < 0; }
+
+  private boolean hasLeftNode(int i) { return table.data[i*3+2] < 0; }
+
+  private boolean hasRightNode(int i) { return table.data[i*3+3] < 0; }
+
+  private int size() { return table.size; }
+
+  private int get(int idx) { return data.data[table.data[idx]]; }
+
+  // Iterators
+  public Iterable<Int> preorderIterator() {
+    return new Iterable<Int>() {
+      public Iterator<Int> iterator() {
+        return new PreOrder(IntBST.this, IntBST.this.data.size);
+      }
+    };
   }
 
-  private void setLeftNode(int i, int v) {
-    table.data[i*3 + 2] = v;
-  }
+  //
+  // Iterator Inner Classes
+  //
 
-  private void setRightNode(int i, int v) {
-    table.data[i*3 + 3] = v;
-  }
+  class PreOrder implements Iterator<Int> {
+    final private IntQueue queue;
+    final private IntBST bst;
+    final private Int cursor = new Int();
 
-  private int parent(int i) {
-    return table.data[i*3+1];
-  }
+    public PreOrder(IntBST bst, int initialCapacity) {
+      queue = new IntQueue(initialCapacity >>> 2);
+      queue.push(0);
+      this.bst = bst;
+    }
 
-  private int leftNode(int i) {
-    return table.data[i*3+2];
-  }
+    @Override
+    public boolean hasNext() {
+      return !queue.empty();
+    }
 
-  private int rightNode(int i) {
-    return table.data[i*3+3];
-  }
-
-  private boolean hasParent(int i) {
-    return table.data[i*3+1] < 0;
-  }
-
-  private boolean hasLeftNode(int i) {
-    return table.data[i*3+2] < 0;
-  }
-
-  private boolean hasRightNode(int i) {
-    return table.data[i*3+3] < 0;
-  }
-
-  private int size() {
-    return table.size;
-  }
-
-  private int get(int idx) {
-    return data.data[table.data[idx]];
+    @Override
+    public Int next() {
+      int ans = queue.pop();
+      if (bst.hasLeftNode(ans)) queue.push(bst.leftNode(ans));
+      if (bst.hasRightNode(ans)) queue.push(bst.rightNode(ans));
+      cursor.val = ans;
+      return cursor;
+    }
   }
 }

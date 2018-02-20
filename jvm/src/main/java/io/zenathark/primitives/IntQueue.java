@@ -46,7 +46,15 @@ public class IntQueue {
 
   // Public
   /** Internal array storage */
-  final public IntArray array = new IntArray();
+  final public IntArray array;
+
+  public IntQueue() {
+    this(0);
+  }
+
+  public IntQueue(int initialCapacity) {
+    array = new IntArray(initialCapacity);
+  }
 
   /**
    * Appends a new element to the Queue.
