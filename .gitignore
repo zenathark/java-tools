@@ -15,10 +15,10 @@ gradlew.bat
 
 *.class
 jvm/target/*
-jvm/project/*
+jvm/project/target/*
 
-!/project/plugins.sbt
-!/project/build.properties
+!jvm/project/plugins.sbt
+!jvm/project/build.properties
 
 # Idea 
 .idea
